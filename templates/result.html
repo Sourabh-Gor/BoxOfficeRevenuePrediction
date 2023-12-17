@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Prediction Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='video1.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <header>
+            <nav>
+                <div class="logo">BOX OFFICE REVENUE PREDICTION</div>
+                
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <h2>Linear Regression Result</h2>
+                <p>{{ linear_result }}</p>
+            </div>
+            <br>
+            <div class="form-container">
+                <h2>Multiple Regression Result</h2>
+                <p>{{ multiple_result }}</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
